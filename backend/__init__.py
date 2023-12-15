@@ -22,10 +22,11 @@ def create_app():
 
     login_manager = LoginManager(app)
 
-    from routes import main_bp, auth_bp
+    from routes import main_bp, auth_bp, admin_bp
     
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
+    app.register_blueprint(admin_bp)
 
     
     import models

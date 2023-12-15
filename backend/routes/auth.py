@@ -13,17 +13,29 @@ def generate_token(user_id):
     
     return jwt.encode(payload, current_app.config['SECRET_KEY'], algorithm="HS256")
 
-def decode_token(token):
-    try:
-        payload = jwt.decode(token, current_app.config['SECRET_KEY'], algorithms=['HS256'])
-        return payload['sub']
 
-    except jwt.ExpiredSignatureError:
-        return 'Token has expired, please login again'
+def jwt_required():
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            token = request.headers.get('Authorization')
+            if not token:
+                return {'msg': "Unauthenticated user"}, 401
 
-    except jwt.InvalidTokenError:
-        return 'Invalid token, please login again'
+            try:
+                return func(*args, **kwargs)
+            
+            except jwt.ExpiredSignatureError:
+                return {"msg": 'Expired token'}, 401
+                
+            except jwt.InvalidTokenError:
+                return {'msg': 'Invalid token'}, 401
+    
+        return wrapper
+    return decorator
 
+def getUser(token):
+    decoded_token = jwt.decode(token, current_app.config["SECRET_KEY"], algorithms=["HS256"])['sub']
+    return decoded_token
 
 def hash_password(password: str):
     from app import bcrypt
@@ -43,13 +55,8 @@ def register():
         return jsonify({'msg': 'Username and password are required'})
 
     from models import User
-    print('username')
-    print(username)
-    print('password')
-    print(password)
 
     existing_user = User.query.filter_by(username=username).first()
-    print(existing_user)
 
     all_users = User.query.all();
     for user in all_users:
