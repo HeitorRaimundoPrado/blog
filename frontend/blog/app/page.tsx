@@ -9,41 +9,31 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
       </Head>
       <NavBar />
-      <div className='matte-container pb-6'>
-        <div className='content'>
-          <h1 className='font-lobster text-3xl text-center mb-2'>Heitor's Blog</h1>
-          <Image src='/background_landing.png'
-            alt='Background image'
-            layout='responsive'
-            width={0}
-            height={0}
-            style={{ width: '100%', height: 'auto', maxWidth: 500, marginInline: 'auto' }}
-          />
-          <div className='width-full flex mt-10 content'>
-            <a href="#contact" className='text-white bg-amber-600 p-2 rounded-xl  mx-auto'>Contact Me</a>
+      <div className='text-white pb-6 font-sans font-roboto'>
+        <div className='slate-background-top h-80 bg-green-400 flex'>
+          <div className='mt-24 ml-28'>
+            <h2 className=' text-3xl  font-bold w-60'>Welcome to my Coding Journey</h2>
+            <p className='mt-6'>Sharing my coding experiences</p>
           </div>
-          <main className='ml-64 mt-20 mr-64'>
-            <article className='font-serif'>
-              <section>
-                <h1 className='font-bold'>About Me</h1>
-                <p> I am a Computer Science student at UFU ( Universidade Federal de Uberlândia )</p>
-                <p> My interests at the moment are mostly web development related, with focus on
-                  Python for backend with Flask framework and React / Next for frontend</p>
-                <p> I have been always interested in computers, and have studied some competitive programming as well
-                  competing in the Brazillian Olympiad in Informatics and winning two medals ( one bronze and one silver ) </p>
-
-              </section>
-            </article>
-          </main>
-
         </div>
-        <div>
+        <Image src="/landing_page_top.png" width={300} height={300} alt="background image" style={{ position: "relative", bottom: "18rem", left: "50rem" }} />
+        <div className='mt-28 flex flex-row'>
+          <div className='bg-green-400 flex w-1/4 h-40 flex flex-col pt-8 rounded-md info-square-1'>
+            <h2 className='font-bold text-center text-xl'>Remember to always KISS</h2>
+            <p className='ml-28'>Keep it simple stupid</p>
+          </div>
+          <div className="ml-12">
+            <h2 className="text-lg  uppercase relative bottom-8 text-gray-400">Feature</h2>
+            <h1 className="font-bold text-lg mb-4">Simplicity and Efficiency</h1>
+            <p>I specialize in Computer Science, programming specially web-development and competitive programming,
+              and I also like to share my knowledge with others</p>
+
+            <a href="#" className="text-sm text-gray-400">Explore more</a>
+          </div>
         </div>
-        <div className='matte-left'></div>
-        <div className="matte-right"></div>
       </div>
       <Footer />
     </>
