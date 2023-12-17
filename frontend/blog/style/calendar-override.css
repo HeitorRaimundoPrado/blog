@@ -1,0 +1,23 @@
+.react-calendar {
+  background-color: #202325;
+  border: none;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+.react-calendar__tile--now {
+  @apply bg-transparent;
+}
+
+.react-calendar__tile:hover {
+  @apply bg-green-400 rounded-2xl text-white !important;
+}
+
+.react-calendar__tile--active {
+  @apply bg-green-400 rounded-2xl !important;
+}

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Head from 'next/head'
+import Link from 'next/link'
 import "@/style/index.css"
 import Footer from '@/components/Footer'
 import NavBar from '@/components/NavBar'
@@ -65,14 +66,14 @@ export default function Home() {
           <div className="ml-28">
             <div className="flex flex-row">
               <div className="info-square-left">
-                <a href="#"><img className="svg-white svg-landing relative bottom-10 left-10" src="github.svg" alt="Github" /></a>
-                <a href="#"><img className="svg-white svg-landing" src="youtube.svg" alt="YouTube" /></a>
-                <a href="#" className="relative top-10 right-10"><img className="svg-white svg-landing" src="discord.svg" alt="Discord" /></a>
+                <Link href="#"><img className="svg-white svg-landing relative bottom-10 left-10" src="github.svg" alt="Github" /></Link>
+                <Link href="#"><img className="svg-white svg-landing" src="youtube.svg" alt="YouTube" /></Link>
+                <Link href="#" className="relative top-10 right-10"><img className="svg-white svg-landing" src="discord.svg" alt="Discord" /></Link>
               </div>
               <div className="info-square-right">
-                <a href="#"><img className="svg-white svg-landing relative bottom-10 left-10" src="instagram.svg" alt="Instagram" /></a>
-                <a href="#"><img className="svg-white svg-landing" src="leetcode.svg" alt="Leetcode" /></a>
-                <a href="#"><img className="svg-white svg-landing relative top-10 right-10" src="linkedin.svg" alt="Linkedin" /></a>
+                <Link href="#"><img className="svg-white svg-landing relative bottom-10 left-10" src="instagram.svg" alt="Instagram" /></Link>
+                <Link href="#"><img className="svg-white svg-landing" src="leetcode.svg" alt="Leetcode" /></Link>
+                <Link href="#"><img className="svg-white svg-landing relative top-10 right-10" src="linkedin.svg" alt="Linkedin" /></Link>
               </div>
             </div>
           </div>
@@ -81,8 +82,8 @@ export default function Home() {
           <h1 className="uppercase text-4xl m-auto">Get Started</h1>
           <p className="m-auto mt-8">No experience required. Start your coding journey today!</p>
           <div className="m-auto mt-4 justify-between flex w-60">
-            <button className="rounded-2xl w-28 h-10 bg-gray-800 ">Start Now</button>
-            <button className="rounded-2xl w-28 h-10 bg-gray-800">Contact Me</button>
+            <Link href="/blog" ><button className="rounded-2xl w-28 h-10 bg-gray-800 ">Start Now</button></Link>
+            <Link href="/contact"><button className="rounded-2xl w-28 h-10 bg-gray-800">Contact Me</button></Link>
           </div>
         </div>
       </div>
