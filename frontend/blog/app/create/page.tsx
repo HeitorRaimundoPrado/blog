@@ -4,6 +4,7 @@ import MainInfo from "@/components/create/MainInfo"
 import ImagesAndCta from "@/components/create/ImagesAndCta"
 import CategoryAndAttributes from "@/components/create/CategoryAndAttributes"
 import ScheduleAndPublish from "@/components/create/SchedulePublish"
+import TextEditor from "@/components/create/TextEditor"
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -14,12 +15,13 @@ const Create: React.FC = () => {
   return (
     <>
       <Dashboard />
-      <div>
+      <div className="mb-16">
         <TopBar />
+        <ScheduleAndPublish />
         <MainInfo />
         <ImagesAndCta />
         <CategoryAndAttributes />
-        <ScheduleAndPublish />
+        <TextEditor />
       </div>
     </>
   )

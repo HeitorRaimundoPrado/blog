@@ -13,6 +13,7 @@
     "react": "^18",
     "react-calendar": "^4.7.0",
     "react-dom": "^18",
+    "react-quill": "^2.0.0",
     "typeface-lobster": "^1.1.13"
   },
   "devDependencies": {

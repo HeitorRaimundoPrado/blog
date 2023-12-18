@@ -8,7 +8,7 @@ const Dashboard: React.FC = () => {
   }
 
   return (
-    <nav className="font-sans font-roboto text-white p-12 fixed flex flex-col justify-between h-screen w-80">
+    <nav className="font-sans font-roboto text-white p-12 fixed top-0 flex flex-col justify-between h-screen w-80">
       <div>
         <h2>Dashboard</h2>
         <ul className="mt-10">

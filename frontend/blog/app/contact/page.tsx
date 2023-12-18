@@ -7,9 +7,6 @@ import "@/style/contact.css"
 const Contact: React.FC = () => {
   return (
     <div className="text-white font-sans font-roboto">
-      <Head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
-      </Head>
       <NavBar />
       <div className="flex  flex-col">
         <h1 className="mx-auto text-2xl mt-14">Contact</h1>

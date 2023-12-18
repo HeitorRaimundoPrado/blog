@@ -5,6 +5,13 @@
 
 :root {
   --primary-color: #181A1B;
+  --secondary-color: #202325;
+  --third-color: #303335;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 }
 
 body {
@@ -13,4 +20,18 @@ body {
 
 .svg-white {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(328deg) brightness(108%) contrast(101%);
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
